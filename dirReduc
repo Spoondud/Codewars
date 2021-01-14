@@ -1,0 +1,11 @@
+def dirReduc(arr):
+	dic = {"north":"south", "south":"north", "west":"east", "east":"west"}
+	new = []
+	for i in arr:
+		if new and new[-1] == dic[i]:
+			new.pop()
+		else:
+			new.append(i)
+	return(new)
+
+print(dirReduc(["NORTH", "SOUTH", "WEST"]))
